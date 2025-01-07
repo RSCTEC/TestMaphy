@@ -31,7 +31,7 @@
     "otp-generator": "^2.0.1",
     "qrcode": "^1.4.4",
     "random": "^3.0.6",
-    "sequelize": "^6.3.5",
+    "sequelize": "^6.37.5",
     "speakeasy": "^2.0.0",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6",
