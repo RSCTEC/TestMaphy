@@ -35,7 +35,7 @@
     "speakeasy": "^2.0.0",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6",
-    "winston": "^3.3.3"
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
