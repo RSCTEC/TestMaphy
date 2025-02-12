@@ -3,7 +3,6 @@ on:
   push:
     branches:
     - main
-    - release/*
 Jobs:
   Qualys_was_scan:
     runs-on: ubuntu-latest
@@ -15,10 +14,10 @@ Jobs:
           fetch-depth: 0
   # You may pin to the exact commit or the version.
   # uses: Qualys/github-action-qwas@aaed9771cc7a5604510600b487ead99e712e9549
-       - name: Qualys GitHub actions for Web Application Scanning 
-         uses: Qualys/github-action-qwas@v1.0.0
-         id: was
-         with:
+      - name: Qualys GitHub actions for Web Application Scanning 
+        uses: Qualys/github-action-qwas@v1.0.0
+        id: was
+        with:
     # Qualys Username
           QUALYS_USERNAME: 
     # Qualys Password
