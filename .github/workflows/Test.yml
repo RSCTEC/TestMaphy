@@ -9,7 +9,7 @@ jobs:
     name: Qualys WAS Scan
     steps:
       - name: Checkout repository
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           fetch-depth: 0
 
