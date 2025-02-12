@@ -1,12 +1,11 @@
 name: Qualys GitHub actions for Web Application Scanning
 on:
-  schedule:
-  - cron: '*/5 * * * *'
-Jobs:
+  workflow_dispatch:
+jobs:
   Qualys_was_scan:
     runs-on: ubuntu-latest
     name: Qualys WAS Scan
-    Steps:
+    steps:
       - name: checkout
         uses: actions/checkout@v3
         with:
