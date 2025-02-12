@@ -10,8 +10,6 @@ jobs:
             uses: actions/checkout@v3 
             with:
                 fetch-depth: 0
-          - name: Force update Qualys action
-              run: rm -rf ~/.cache && rm -rf ~/.npm && rm -rf ~/.yarn
           - name: Qualys WAS scan action step
             uses: Qualys/github_action_qwas@v1.0.0
             id: was
