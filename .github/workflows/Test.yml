@@ -1,57 +1,30 @@
-name: Qualys GitHub actions for Web Application Scanning
+name: Qualys GitHub Actions for Web Application Scanning
+
 on:
   workflow_dispatch:
+
 jobs:
   Qualys_was_scan:
     runs-on: ubuntu-latest
     name: Qualys WAS Scan
     steps:
-      - name: checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-  # You may pin to the exact commit or the version.
-  # uses: Qualys/github-action-qwas@aaed9771cc7a5604510600b487ead99e712e9549
-      - name: Qualys GitHub actions for Web Application Scanning 
+
+      - name: Run Qualys WAS Scan
         uses: Qualys/github-action-qwas@v1.0.0
         id: was
         with:
-    # Qualys Username
-          QUALYS_USERNAME: 
-    # Qualys Password
-          QUALYS_PASSWORD: 
-    # API Server URL
-          API_SERVER: 
-    # Scan Name
-          SCAN_NAME: 
-    # Scan Type
-          SCAN_TYPE: 
-    # Webapp ID
-          WEBAPP_ID: 
-    # Authentication Record
-          AUTH_RECORD: # optional
-    # Authentication Record ID
-          AUTH_RECORD_ID: # optional
-    # Option Profile
-          OPTION_PROFILE: # optional
-    # Option Profile ID
-          OPTION_PROFILE_ID: # optional
-    # Cancel Option
-          CANCEL_OPTION: # optional
-    # Cancel Hours
-          CANCEL_HOURS: # optional
-    # Severity Check
-          SEVERITY_CHECK: # optional
-    # Severity Level
-          SEVERITY_LEVEL: # optional
-    # Exclude
-          EXCLUDE: # optional
-    # Fail on Scan Error
-          FAIL_ON_SCAN_ERROR: # optional
-    # Wait for Result
-          WAIT_FOR_RESULT: # optional
-    # Interval
-          INTERVAL: # optional
-    # Timeout
-          TIMEOUT: # optional
-          
+          QUALYS_USERNAME: ${{ secrets.QUALYS_USERNAME }}
+          QUALYS_PASSWORD: ${{ secrets.QUALYS_PASSWORD }}
+          API_SERVER: ${{ secrets.API_SERVER }}
+          SCAN_NAME: "MyWebAppScan"
+          SCAN_TYPE: "VULNERABILITY"
+          WEBAPP_ID: "12345"  # Replace with actual WebApp ID
+          AUTH_RECORD_ID: "67890"  # Optional, remove if not needed
+          OPTION_PROFILE_ID: "11111"  # Optional, remove if not needed
+          WAIT_FOR_RESULT: "true"
+          INTERVAL: "30"
+          TIMEOUT: "600"
