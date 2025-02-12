@@ -1,8 +1,6 @@
 name: Qualys WAS Scan 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch
 jobs:
     Qualys_was_scan:
         runs-on: ubuntu-latest
