@@ -1,8 +1,6 @@
 name: Qualys WAS Scan
 
-on:
-
-push:
+on: pull-request
 
 branches:
 
