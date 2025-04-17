@@ -17,10 +17,8 @@ steps:
 uses: actions/checkout@v3
 with:
 - name: Qualys WAS scan action step
-uses: Qualys/github_action_qwas@main
 
 id: was
-
 with:
 
 API_SERVER: ${{ vars.API_SERVER }}
