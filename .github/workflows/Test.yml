@@ -11,15 +11,10 @@ branches:
 jobs:
 
 Qualys_was_scan:
-
 runs-on: ubuntu-latest
-
-name: Qualys WAS Scan
-
 steps:
-
 - name: Checkout
-uses: actions/checkout@v3 
+uses: actions/checkout@v3
 with:
 - name: Qualys WAS scan action step
 uses: Qualys/github_action_qwas@main
